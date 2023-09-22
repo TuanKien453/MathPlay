@@ -5,7 +5,7 @@ using UnityEngine;
 public class BackgroundControler : MonoBehaviour
 {   [Range(0,1)]
     public float parallaxEffectX;
-    public float parallaxEffectY;
+    
     private float startpos, movedistX, lenghtBackground;
     public GameObject cam;
     float startposy;
