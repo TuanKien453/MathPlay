@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnermyController : MonoBehaviour
 {
     public GetInput input;
+    public PlayerHealth playerHealth;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,9 @@ public class EnermyController : MonoBehaviour
     {
         if(other.gameObject.tag == "Player") {
             input.Show();
+            playerHealth.takeDamage(10f);
             Debug.Log("PlayerCollisedEnermy");
+
         }
         
     }

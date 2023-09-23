@@ -1282,8 +1282,9 @@ GameObject:
   - component: {fileID: 825518048}
   - component: {fileID: 825518047}
   - component: {fileID: 825518046}
-  - component: {fileID: 825518049}
   - component: {fileID: 825518045}
+  - component: {fileID: 825518049}
+  - component: {fileID: 825518050}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1425,6 +1426,21 @@ MonoBehaviour:
     m_Bits: 8
   boxsize: {x: 0.48, y: 0.32}
   offsetX: -0.28
+--- !u!114 &825518050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825518044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97e43020b49bed4cbe6b5b53f2438c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1570188687}
+  maxHealth: 100
+  currentHealth: 90
 --- !u!1 &893749101
 GameObject:
   m_ObjectHideFlags: 0
@@ -2904,6 +2920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 1153074164}
+  playerHealth: {fileID: 825518050}
 --- !u!61 &1325534040
 BoxCollider2D:
   m_ObjectHideFlags: 0
