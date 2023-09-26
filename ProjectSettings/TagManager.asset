@@ -62,3 +62,6 @@ TagManager:
   - name: creatures
     uniqueID: 3910382215
     locked: 0
+  - name: HealthBar
+    uniqueID: 32267399
+    locked: 0

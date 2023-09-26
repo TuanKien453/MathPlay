@@ -39,12 +39,12 @@ public class GetInput : MonoBehaviour
 
 
 
-    public void Show()
+    public void Enable()
     {
         Debug.Log("show");
         gameObject.SetActive(true);
     }
-    public void Hide()
+    public void Disable()
     {
         Debug.Log("hide");
         gameObject.SetActive(false);

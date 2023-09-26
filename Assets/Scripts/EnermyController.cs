@@ -6,10 +6,12 @@ public class EnermyController : MonoBehaviour
 {
     public GetInput input;
     public PlayerHealth playerHealth;
+
+
     // Start is called before the first frame update
     void Start()
     {
-      input.Hide();
+      input.Disable();
     }
 
     // Update is called once per frame
@@ -20,7 +22,7 @@ public class EnermyController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.tag == "Player") {
-            input.Show();
+            input.Enable();
             playerHealth.takeDamage(10f);
             Debug.Log("PlayerCollisedEnermy");
 
