@@ -35,7 +35,10 @@ public class GetInput : MonoBehaviour
         
         
     }
-   
+   public string getinput()
+    {
+        return input;
+    }
 
 
 
