@@ -26,11 +26,15 @@ public class MathQuiz : MonoBehaviour
             result = operand1 - operand2;
         }
 
-        if (dif == 0 && result > 10) 
+        if(result < 0)
         {
             GenerateRandomQuiz(dif);
         }
-        else if (dif == 1 && result <= 10) 
+        if (dif == 0 && result > 10)
+        {
+            GenerateRandomQuiz(dif);
+        }
+        else if (dif == 1 && result <= 10)
         {
             GenerateRandomQuiz(dif);
         }
@@ -53,8 +57,17 @@ public class MathQuiz : MonoBehaviour
     }
 
 
-    public bool CheckAnswer(int answer)
+    public bool CheckAnswer(string answer)
     {
-        return answer == result;
+        int userInput;
+        if (int.TryParse(answer, out userInput))
+        {
+            return true;
+        }
+        else
+        {
+
+            return false;
+        }
     }
 }

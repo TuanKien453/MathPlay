@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class EnermyHealth : MonoBehaviour
 {
-    public Canvas canvas;
+    public GameObject mathText;
     public Transform enemyTransform;
     public Slider slider;
     public float CurrentHealth;
@@ -14,8 +14,8 @@ public class EnermyHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        canvas = GetComponentInChildren<Canvas>();
-      
+
+
     }
 
     // Update is called once per frame
@@ -23,14 +23,27 @@ public class EnermyHealth : MonoBehaviour
     {
         Vector3 targetPosition = Camera.main.WorldToScreenPoint(enemyTransform.position + new Vector3(0, HealthBaroffsetY, 0));
         slider.transform.position = targetPosition;
-    }
-    public void Hide()
-    {
-        canvas.enabled = false;
+        
+
     }
 
-    public void Show()
+    public void Takedamage(float damage)
+    {   
+        CurrentHealth -= damage;
+        slider.value = CurrentHealth/MaxHealth;
+        if (CurrentHealth <= 0)
+        {
+            Destroy(gameObject);
+            Debug.Log("enermy die");
+        }
+    }
+    public void HideMathText()
     {
-        canvas.enabled = true;
+        mathText.SetActive(false);
+    }
+
+    public void ShowMathText()
+    {
+        mathText.SetActive(true);
     }
 }

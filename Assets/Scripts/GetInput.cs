@@ -27,10 +27,8 @@ public class GetInput : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            input = s;
-            Debug.Log(input);
             ClearInput();
-            Debug.Log("clear");
+            input = s;
         }
         
         
@@ -44,12 +42,12 @@ public class GetInput : MonoBehaviour
 
     public void Enable()
     {
-        Debug.Log("show");
+        Debug.Log("showInputField");
         gameObject.SetActive(true);
     }
     public void Disable()
     {
-        Debug.Log("hide");
+        Debug.Log("hideInputField");
         gameObject.SetActive(false);
     }
 
