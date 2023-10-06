@@ -11,11 +11,11 @@ public class MathQuiz : MonoBehaviour
 
 
 
-    public void GenerateRandomQuiz()
+    public void GenerateRandomQuiz(int dif)
     {
-        operand1 = Random.Range(1, 10); 
-        operand2 = Random.Range(1, 10); 
-        bool isAddition = Random.value > 0.5f; 
+        operand1 = Random.Range(1, 10);
+        operand2 = Random.Range(1, 10);
+        bool isAddition = Random.value > 0.5f;
 
         if (isAddition)
         {
@@ -26,9 +26,13 @@ public class MathQuiz : MonoBehaviour
             result = operand1 - operand2;
         }
 
-        if (result < 0)
+        if (dif == 0 && result > 10) 
         {
-            GenerateRandomQuiz();
+            GenerateRandomQuiz(dif);
+        }
+        else if (dif == 1 && result <= 10) 
+        {
+            GenerateRandomQuiz(dif);
         }
     }
 

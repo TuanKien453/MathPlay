@@ -35,7 +35,7 @@ public class EnermyController : MonoBehaviour
         input.Enable();
         Time.timeScale = 0;
         Debug.Log("PlayerCollisedEnermy");
-        mathQuiz.GenerateRandomQuiz();
+        mathQuiz.GenerateRandomQuiz(0);
         string math=mathQuiz.ConvertToMathString();
         text.text = math;
     }
