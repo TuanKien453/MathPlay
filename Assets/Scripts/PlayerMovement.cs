@@ -11,8 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpforce = 5;
     Rigidbody2D rigitbody;
     float moveDir;
-    public float dashTime=1f;
-    public float dashSpeed = 15f;
+
    
 
     public float groundCheckDistant = 0.2f;
