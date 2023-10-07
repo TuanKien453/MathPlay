@@ -7,10 +7,12 @@ public class GetInput : MonoBehaviour
 {
     // Start is called before the first frame update
     private string input;
-    private InputField inputField;
+    public InputField inputField;
+    [SerializeField] private int characterLimit = 10;
     void Start()
     {
         inputField = GetComponent<InputField>();
+        inputField.characterLimit = characterLimit;
     }
 
     // Update is called once per frame
@@ -38,12 +40,13 @@ public class GetInput : MonoBehaviour
         return input;
     }
 
-
+    
 
     public void Enable()
     {
         Debug.Log("showInputField");
         gameObject.SetActive(true);
+        inputField.ActivateInputField();
     }
     public void Disable()
     {

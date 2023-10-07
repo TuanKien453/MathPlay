@@ -8,8 +8,14 @@ public class MathQuiz : MonoBehaviour
     private int operand1;
     private int operand2;
     private int result;
-
-
+    private int operators;
+    public enum OperationType
+    {
+        Addition,
+        Subtraction,
+        Multiplication,
+        Division
+    };
 
     public void GenerateRandomQuiz(int dif)
     {
@@ -26,19 +32,49 @@ public class MathQuiz : MonoBehaviour
             result = operand1 - operand2;
         }
 
-        if(result < 0)
+        if (result < 0 || (dif == 0 && result > 10) || (dif == 1 && result <= 10))
         {
             GenerateRandomQuiz(dif);
         }
-        if (dif == 0 && result > 10)
-        {
-            GenerateRandomQuiz(dif);
-        }
-        else if (dif == 1 && result <= 10)
-        {
-            GenerateRandomQuiz(dif);
-        }
+        Debug.Log("result: " + result);
+
     }
+
+
+
+    public void GenerateRandomQuiz(int dif, OperationType type)
+    {
+
+        operand1 = Random.Range(1, 10);
+        operand2 = Random.Range(1, 10);
+
+        if (type == OperationType.Addition)
+        {
+            result = operand1 + operand2;
+        }
+        else if (type == OperationType.Subtraction)
+        {
+            result = operand1 - operand2;
+        }
+        else if (type == OperationType.Multiplication)
+        {
+            result = operand1 * operand2;
+        }
+        else if (type == OperationType.Division)
+        {
+            result = operand1 / operand2;
+        }
+
+        if (result < 0 || (dif == 0 && result > 10) || (dif == 1 && result <= 10))
+        {
+            GenerateRandomQuiz(dif, type);
+        }
+
+        Debug.Log("result: " + result);
+        Debug.Log("operand1: " + operand1);
+        Debug.Log("operand2: " + operand2);
+    }
+
 
     public string ConvertToMathString()
     {
@@ -59,8 +95,7 @@ public class MathQuiz : MonoBehaviour
 
     public bool CheckAnswer(string answer)
     {
-        int userInput;
-        if (int.TryParse(answer, out userInput))
+        if (result.ToString() == answer)
         {
             return true;
         }

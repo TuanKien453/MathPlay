@@ -5,7 +5,7 @@ using UnityEngine;
 public class FPSLimit : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int targetFrameRate = 3;
+    [SerializeField] private int targetFrameRate = 3;
 
     void Awake()
     {

@@ -38,7 +38,6 @@ public class PlayerMovement : MonoBehaviour
         if (moveDir != 0)
         {
             isWalk = true;
-
         }
         else
         {

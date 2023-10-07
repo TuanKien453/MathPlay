@@ -44,7 +44,7 @@ public class GamePlay : MonoBehaviour
             {
                 Debug.Log("False");
                 playerHealth.takeDamage(10f);
-
+                Time.timeScale = 1;
                 enermyHealth.HideMathText();
                 input.Disable();
             }
