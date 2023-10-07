@@ -9,6 +9,7 @@ public class GamePlay : MonoBehaviour
     public GetInput input;
     public PlayerHealth playerHealth;
     public EnermyHealth enermyHealth;
+    public UiControler Ui;
     public Rigidbody2D playerRigidbody;
     public Text text;
  
@@ -19,9 +20,9 @@ public class GamePlay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        input.Disable();
+        input.InputDisable();
         mathQuiz = gameObject.AddComponent<MathQuiz>();
-        enermyHealth.HideMathText();
+        Ui.HideMathText();
     }
 
     // Update is called once per frame
@@ -37,16 +38,16 @@ public class GamePlay : MonoBehaviour
                 Time.timeScale = 1;
                 enermyHealth.Takedamage(10f);
 
-                enermyHealth.HideMathText();
-                input.Disable();
+                Ui.HideMathText();
+                input.InputDisable();
             }
             else
             {
                 Debug.Log("False");
                 playerHealth.takeDamage(10f);
                 Time.timeScale = 1;
-                enermyHealth.HideMathText();
-                input.Disable();
+                Ui.HideMathText();
+                input.InputDisable();
             }
 
         }
@@ -54,8 +55,8 @@ public class GamePlay : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.tag == "Enermy") {
-            enermyHealth.ShowMathText();
-            input.Enable();
+            Ui.ShowMathText();
+            input.InputEnable();
             PuzzleEvent();
         }
         

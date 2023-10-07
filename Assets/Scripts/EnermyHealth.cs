@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class EnermyHealth : MonoBehaviour
 {
-    public GameObject mathText;
+
     public Transform enemyTransform;
     public Slider slider;
     public float CurrentHealth;
@@ -37,13 +37,5 @@ public class EnermyHealth : MonoBehaviour
             Debug.Log("enermy die");
         }
     }
-    public void HideMathText()
-    {
-        mathText.SetActive(false);
-    }
 
-    public void ShowMathText()
-    {
-        mathText.SetActive(true);
-    }
 }
