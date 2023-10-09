@@ -1872,6 +1872,7 @@ MonoBehaviour:
   slider: {fileID: 1570188687}
   maxHealth: 100
   currentHealth: 100
+  damageDealt: 10
 --- !u!95 &825518051
 Animator:
   serializedVersion: 3
@@ -1904,11 +1905,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 1153074164}
-  playerHealth: {fileID: 825518050}
-  enermyHealth: {fileID: 1325534043}
-  Ui: {fileID: 1726445447}
+  playerStats: {fileID: 825518050}
+  currentTimeDisplay: {fileID: 57356293}
   playerRigidbody: {fileID: 825518046}
   text: {fileID: 596065972}
+  Ui: {fileID: 1726445447}
+  timeCounter: 6
 --- !u!1 &893749101
 GameObject:
   m_ObjectHideFlags: 0
@@ -3533,6 +3535,7 @@ MonoBehaviour:
   CurrentHealth: 40
   MaxHealth: 40
   HealthBaroffsetY: 0.57
+  damageDealt: 15
 --- !u!1 &1345887872
 GameObject:
   m_ObjectHideFlags: 0
@@ -3786,7 +3789,6 @@ GameObject:
   - component: {fileID: 1584580400}
   - component: {fileID: 1584580399}
   - component: {fileID: 1584580398}
-  - component: {fileID: 1584580397}
   m_Layer: 5
   m_Name: UI (1)
   m_TagString: Untagged
@@ -3814,19 +3816,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1584580397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584580395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 974e2c9af37bb7545bfd31d394c83c32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mathText: {fileID: 0}
 --- !u!114 &1584580398
 MonoBehaviour:
   m_ObjectHideFlags: 0

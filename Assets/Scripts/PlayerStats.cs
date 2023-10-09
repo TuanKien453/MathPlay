@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
-{   
+{
     public Slider slider;
 
     public float maxHealth = 100f;
@@ -30,10 +30,11 @@ public class PlayerStats : MonoBehaviour
     {
         currentHealth -= damage;
         slider.value = currentHealth / maxHealth;
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             Debug.Log("gameover");
         }
     }
+
 
 }
