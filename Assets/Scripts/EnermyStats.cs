@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnermyHealth : MonoBehaviour
+public class EnermyStats : MonoBehaviour
 {
 
     public Transform enemyTransform;
@@ -11,6 +11,7 @@ public class EnermyHealth : MonoBehaviour
     public float CurrentHealth;
     public float MaxHealth;
     public float HealthBaroffsetY;
+    public float damageDealt = 15f;
     // Start is called before the first frame update
     void Start()
     {

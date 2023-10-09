@@ -46,13 +46,15 @@ public class GetInput : MonoBehaviour
     {
         Debug.Log("showInputField");
         gameObject.SetActive(true);
-        inputField.ActivateInputField();
     }
     public void InputDisable()
     {
         Debug.Log("hideInputField");
         gameObject.SetActive(false);
     }
-
+    public void clickOnInputField()
+    {
+        inputField.ActivateInputField();
+    }
 }
 

@@ -3,22 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerStats : MonoBehaviour
 {   
     public Slider slider;
 
     public float maxHealth = 100f;
     public float currentHealth = 100f;
+    public float damageDealt = 10f;
 
+    private float currentHealthBar;
     // Start is called before the first frame update
     void Start()
     {
         slider.value = currentHealth / maxHealth;
+        currentHealthBar = maxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
+
 
     }
 

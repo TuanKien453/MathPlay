@@ -8,7 +8,7 @@ public class MathQuiz : MonoBehaviour
     private int operand1;
     private int operand2;
     private int result;
-    private int operators;
+    private OperationType operators;
     public enum OperationType
     {
         Addition,
@@ -17,29 +17,6 @@ public class MathQuiz : MonoBehaviour
         Division
     };
 
-    public void GenerateRandomQuiz(int dif)
-    {
-        operand1 = Random.Range(1, 10);
-        operand2 = Random.Range(1, 10);
-        bool isAddition = Random.value > 0.5f;
-
-        if (isAddition)
-        {
-            result = operand1 + operand2;
-        }
-        else
-        {
-            result = operand1 - operand2;
-        }
-
-        if (result < 0 || (dif == 0 && result > 10) || (dif == 1 && result <= 10))
-        {
-            GenerateRandomQuiz(dif);
-        }
-        Debug.Log("result: " + result);
-        Debug.Log("operand1: " + operand1);
-        Debug.Log("operand2: " + operand2);
-    }
 
 
 
@@ -48,7 +25,7 @@ public class MathQuiz : MonoBehaviour
 
         operand1 = Random.Range(1, 10);
         operand2 = Random.Range(1, 10);
-
+        operators = type;
         if (type == OperationType.Addition)
         {
             result = operand1 + operand2;
@@ -80,13 +57,24 @@ public class MathQuiz : MonoBehaviour
     public string ConvertToMathString()
     {
         string operatorSymbol;
-        if (result >= 0)
+
+        switch (operators)
         {
-            operatorSymbol = "+";
-        }
-        else
-        {
-            operatorSymbol = "-";
+            case OperationType.Addition:
+                operatorSymbol = "+";
+                break;
+            case OperationType.Subtraction:
+                operatorSymbol = "-";
+                break;
+            case OperationType.Multiplication:
+                operatorSymbol = "*";
+                break;
+            case OperationType.Division:
+                operatorSymbol = "/";
+                break;
+            default:
+                operatorSymbol = "";
+                break;
         }
 
         string mathString = operand1.ToString() + " " + operatorSymbol + " " + operand2.ToString() + " = ?";
