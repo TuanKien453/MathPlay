@@ -1873,6 +1873,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   damageDealt: 10
+  currentHealthBar: 0
 --- !u!95 &825518051
 Animator:
   serializedVersion: 3
@@ -3535,7 +3536,7 @@ MonoBehaviour:
   CurrentHealth: 40
   MaxHealth: 40
   HealthBaroffsetY: 0.57
-  damageDealt: 15
+  damageDealt: 11.2
 --- !u!1 &1345887872
 GameObject:
   m_ObjectHideFlags: 0
