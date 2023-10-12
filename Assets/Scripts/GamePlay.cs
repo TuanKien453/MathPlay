@@ -14,7 +14,7 @@ public class GamePlay : MonoBehaviour
     public Text text;
     public UiControler Ui;
 
-    [SerializeField] private float timeCounter = 6f;
+    private float timeCounter = 0f;
     private float currentTime;
     private EnermyStats enermyStats;
     private MathQuiz mathQuiz;
@@ -82,6 +82,7 @@ public class GamePlay : MonoBehaviour
             if (other.gameObject.tag == "Enermy")
             {
                 enermyStats = other.gameObject.GetComponent<EnermyStats>();
+                timeCounter=enermyStats.TimeCounter;
                 isanswer = true;
                 Ui.ShowMathText();
                 input.InputEnable();

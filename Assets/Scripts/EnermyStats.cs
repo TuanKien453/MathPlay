@@ -12,6 +12,7 @@ public class EnermyStats : MonoBehaviour
     public float MaxHealth;
     public float HealthBaroffsetY;
     public float damageDealt = 15f;
+    public float TimeCounter=6f;
     // Start is called before the first frame update
     void Start()
     {

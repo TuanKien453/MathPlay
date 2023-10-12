@@ -8,12 +8,13 @@ public class EnermyPatrol : MonoBehaviour
     public Transform EndPoint;
     public float speed = 3f;
     public Rigidbody2D rb;
-
+    private Animator animator;
     private bool movingToEndPoint = true;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()

@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 boxsize;
     public float offsetX;
 
-    Animator animator;
+    private Animator animator;
     private String CurrentAnimationState;
 
     private bool isWalk =false;
