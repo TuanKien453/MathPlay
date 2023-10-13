@@ -13,11 +13,13 @@ public class EnermyStats : MonoBehaviour
     public float HealthBaroffsetY;
     public float damageDealt = 15f;
     public float TimeCounter=6f;
+    public GameObject UiHealthBar;
+    private GameObject parentObject;
     // Start is called before the first frame update
     void Start()
     {
-
-
+        UiHealthBar.SetActive(false);
+        parentObject = transform.parent.gameObject;
     }
 
     // Update is called once per frame
@@ -35,9 +37,13 @@ public class EnermyStats : MonoBehaviour
         slider.value = CurrentHealth/MaxHealth;
         if (CurrentHealth <= 0)
         {
-            Destroy(gameObject);
+            Destroy(parentObject);
             Debug.Log("enermy die");
         }
+    }
+    public void ShowHealthBar()
+    {
+        UiHealthBar.SetActive(true);
     }
 
 }

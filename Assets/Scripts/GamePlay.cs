@@ -84,6 +84,7 @@ public class GamePlay : MonoBehaviour
                 enermyStats = other.gameObject.GetComponent<EnermyStats>();
                 timeCounter=enermyStats.TimeCounter;
                 isanswer = true;
+                enermyStats.ShowHealthBar();
                 Ui.ShowMathText();
                 input.InputEnable();
                 PuzzleEvent();
