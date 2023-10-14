@@ -8,7 +8,7 @@ public class GetInput : MonoBehaviour
     // Start is called before the first frame update
     private string input;
     public InputField inputField;
-    [SerializeField] private int characterLimit = 10;
+    [SerializeField] private int characterLimit = 4;
     void Start()
     {
         inputField = GetComponent<InputField>();
