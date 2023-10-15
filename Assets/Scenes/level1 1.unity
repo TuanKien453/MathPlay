@@ -1393,7 +1393,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.2912, y: 0.3518008, z: -10}
+  m_LocalPosition: {x: -5.2912, y: 0.4660008, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 383393505}
@@ -2043,7 +2043,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 825518044}
   m_LocalRotation: {x: -0, y: -0, z: 0.005916521, w: 0.99998254}
-  m_LocalPosition: {x: -5.2912, y: -1.1842, z: 0}
+  m_LocalPosition: {x: -5.2912, y: -1.07, z: 0}
   m_LocalScale: {x: 4.1132874, y: 4.1132874, z: 4.1132874}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2975,7 +2975,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191765346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.2912, y: 0.3518008, z: -10}
+  m_LocalPosition: {x: -5.2912, y: 0.4660008, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400960283}
@@ -2996,6 +2996,7 @@ GameObject:
   - component: {fileID: 1203517105}
   - component: {fileID: 1203517104}
   - component: {fileID: 1203517103}
+  - component: {fileID: 1203517108}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Enermy
@@ -3151,6 +3152,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1203517108
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203517101}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 68555cc7381816a4b8e2742db37c34de, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1207631784
 GameObject:
   m_ObjectHideFlags: 0
@@ -3764,6 +3784,7 @@ GameObject:
   - component: {fileID: 1325534041}
   - component: {fileID: 1325534042}
   - component: {fileID: 1325534043}
+  - component: {fileID: 1325534039}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Enermy
@@ -3836,6 +3857,25 @@ Transform:
   m_Father: {fileID: 1144084595}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1325534039
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325534036}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 68555cc7381816a4b8e2742db37c34de, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &1325534040
 BoxCollider2D:
   m_ObjectHideFlags: 0

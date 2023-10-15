@@ -19,14 +19,16 @@ public class GamePlay : MonoBehaviour
     private EnermyStats enermyStats;
     private MathQuiz mathQuiz;
 
+
     private string answer;
     private Boolean isanswer=false;
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
         currentTime = timeCounter;
         mathQuiz = gameObject.AddComponent<MathQuiz>();
+
         Ui.HideMathText();
         input.InputDisable();
     }
