@@ -10,7 +10,6 @@ public class GamePlay : MonoBehaviour
     public GetInput input;
     public PlayerStats playerStats;
     public Slider currentTimeDisplay;
-    public Rigidbody2D playerRigidbody;
     public Text text;
     public UiControler Ui;
 
