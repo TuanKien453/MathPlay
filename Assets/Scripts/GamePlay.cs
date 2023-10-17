@@ -69,6 +69,7 @@ public class GamePlay : MonoBehaviour
             currentTime -= Time.unscaledDeltaTime;
             currentTimeDisplay.value = currentTime / timeCounter;
         }
+
         else if(isanswer)
         {   
             Debug.Log("False");

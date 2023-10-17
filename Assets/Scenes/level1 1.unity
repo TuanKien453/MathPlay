@@ -2120,7 +2120,6 @@ MonoBehaviour:
   input: {fileID: 1153074164}
   playerStats: {fileID: 825518050}
   currentTimeDisplay: {fileID: 57356293}
-  playerRigidbody: {fileID: 825518046}
   text: {fileID: 596065972}
   Ui: {fileID: 1726445447}
 --- !u!1 &893749101

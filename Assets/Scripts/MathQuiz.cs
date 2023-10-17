@@ -19,7 +19,7 @@ public class MathQuiz : MonoBehaviour
 
 
 
-
+    //dif = 0 result <=10 dif=1 result <=20
     public void GenerateRandomQuiz(int dif, OperationType type)
     {
 
@@ -43,7 +43,7 @@ public class MathQuiz : MonoBehaviour
             result = operand1 / operand2;
         }
 
-        if (result < 0 || (dif == 0 && result > 10) || (dif == 1 && result <= 10))
+        if (result < 0 || (dif == 0 && result > 10) || (dif == 1 && result <= 20))
         {
             GenerateRandomQuiz(dif, type);
         }
