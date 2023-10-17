@@ -2786,7 +2786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputField: {fileID: 1153074165}
-  characterLimit: 10
+  characterLimit: 4
 --- !u!114 &1153074165
 MonoBehaviour:
   m_ObjectHideFlags: 0

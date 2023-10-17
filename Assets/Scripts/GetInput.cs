@@ -13,6 +13,7 @@ public class GetInput : MonoBehaviour
     {
         inputField = GetComponent<InputField>();
         inputField.characterLimit = characterLimit;
+
     }
 
     // Update is called once per frame
