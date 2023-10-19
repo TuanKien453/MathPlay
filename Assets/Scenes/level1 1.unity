@@ -1950,18 +1950,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: -0.011060853, y: 0.0084435195}
+  m_Offset: {x: 0.03419684, y: -0.056514837}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8, y: 0.64}
+    oldSize: {x: 0.61538464, y: 0.61538464}
     newSize: {x: 0.69, y: 0.44}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.19397825, y: 0.3711339}
+  m_Size: {x: 0.21317986, y: 0.30619478}
   m_EdgeRadius: 0
 --- !u!50 &825518046
 Rigidbody2D:
@@ -2024,7 +2024,7 @@ SpriteRenderer:
   m_SortingLayerID: -384585081
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7ef70acad13c1f549a89995c9e435612, type: 3}
+  m_Sprite: {fileID: 5810546318280948410, guid: bd6b897c0e5cc80498c5ff896f94e629, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2063,12 +2063,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpforce: 12
-  groundCheckDistant: 0.75
+  groundCheckDistant: 0.89
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  boxsize: {x: 0.66, y: 0.17}
-  offsetX: -0.04
+  boxsize: {x: 0.7, y: 0.09}
+  offsetX: 0.12
 --- !u!114 &825518050
 MonoBehaviour:
   m_ObjectHideFlags: 0
