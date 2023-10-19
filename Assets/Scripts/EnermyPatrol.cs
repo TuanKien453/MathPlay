@@ -11,14 +11,19 @@ public class EnermyPatrol : MonoBehaviour
     private Animator animator;
     private bool movingToEndPoint = true;
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        
     }
 
     void Update()
     {
+        
+     
+        
         if (movingToEndPoint)
         {
             MoveTowards(EndPoint.position);
@@ -41,9 +46,14 @@ public class EnermyPatrol : MonoBehaviour
 
     void MoveTowards(Vector3 targetPosition)
     {
-        Vector3 direction = (targetPosition - transform.position).normalized;
-        direction.y = 0;
-        rb.velocity = direction * speed;
+        Vector3 direction= new Vector3();
+        float x = targetPosition.x - transform.position.x;
+        direction.x =x;
+
+        rb.velocity = direction.normalized * speed;
+ 
+
+        
     }
 
     void Flip()
@@ -52,4 +62,8 @@ public class EnermyPatrol : MonoBehaviour
         scale.x *= -1;
         transform.localScale = scale;
     }
+
+
+
+
 }
