@@ -21,9 +21,10 @@ public class EnermyPatrol : MonoBehaviour
 
     void Update()
     {
-        
-     
-        
+        StartPoint.position = new Vector3(StartPoint.position.x, transform.position.y, StartPoint.position.z);
+        EndPoint.position = new Vector3(EndPoint.position.x, transform.position.y, EndPoint.position.z);
+
+
         if (movingToEndPoint)
         {
             MoveTowards(EndPoint.position);
