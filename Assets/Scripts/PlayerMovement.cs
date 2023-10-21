@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         moveDir = Input.GetAxis("Horizontal");
         if (moveDir != 0)
         {
@@ -85,6 +86,14 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    void OnCollisionEnter2D(Collision2D other)
+    {
+
+        if (other.gameObject.tag == "Enermy")
+        {
+            ChangeAnimationState("Idle");
+        }
+    }
 
     void Flip()
     {
