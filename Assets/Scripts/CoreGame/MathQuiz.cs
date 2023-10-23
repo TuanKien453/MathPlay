@@ -47,10 +47,6 @@ public class MathQuiz : MonoBehaviour
         {
             GenerateRandomQuiz(dif, type);
         }
-
-        Debug.Log("result: " + result);
-        Debug.Log("operand1: " + operand1);
-        Debug.Log("operand2: " + operand2);
     }
 
 

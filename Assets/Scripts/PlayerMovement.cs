@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5;
-    public float jumpforce = 5;
+    public float speed = 4f;
+    public float jumpforce = 13f;
     Rigidbody2D rigitbody;
     float moveDir;
 

@@ -5,8 +5,14 @@ using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
+
+    private void Awake()
+    {
+        Time.timeScale = 1f;
+    }
     public void Play()
     {
+        
         StartCoroutine(LoadLevelAsync(2));
     }
     public void Quit()

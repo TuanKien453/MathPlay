@@ -10,14 +10,17 @@ public class PlayerStats : MonoBehaviour
     public float damageDealt = 14.5f;
     public float currentHealthBar;
 
-    // Start is called before the first frame update 
+    public delegate void PlayerDeath();
+    public static event PlayerDeath OnPlayerDeath;
     void Start()
     {
         slider.value = currentHealth / maxHealth;
         currentHealthBar = maxHealth;
+
     }
 
-    // Update is called once per frame
+
+
     void Update()
     {
         
@@ -31,7 +34,7 @@ public class PlayerStats : MonoBehaviour
         if (currentHealth <= 0)
         {
             Debug.Log("gameover");
-            
+            OnPlayerDeath?.Invoke();
         }
     }
 
@@ -48,4 +51,7 @@ public class PlayerStats : MonoBehaviour
             }
         }
     }
+
+
+
 }

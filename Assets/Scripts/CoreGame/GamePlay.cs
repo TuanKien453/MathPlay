@@ -24,14 +24,19 @@ public class GamePlay : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {   
+    {
+        PlayerStats.OnPlayerDeath += HandlePlayerDeath;
+
         currentTime = timeCounter;
         mathQuiz = gameObject.AddComponent<MathQuiz>();
 
         Ui.HideMathText();
         input.InputDisable();
     }
-
+    private void OnDestroy()
+    {
+        PlayerStats.OnPlayerDeath -= HandlePlayerDeath;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -116,5 +121,16 @@ public class GamePlay : MonoBehaviour
             randomOperator = MathQuiz.OperationType.Subtraction;
         }
         mathQuiz.GenerateRandomQuiz(difficulty, randomOperator);
+    }
+
+
+
+
+
+
+
+    private void HandlePlayerDeath()
+    {
+        isanswer = false;
     }
 }
